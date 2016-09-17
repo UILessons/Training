@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+
+
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/popup.css">
+    
+    
+    <style type="text/css">
+#loginpopup{height:auto;top:50%;left:50%;margin:-164px 0 0 -211px;width:422px;position:fixed;z-index:5000}#loginpopup .loginButton{width:209px;display:block;margin:10px auto 0}#loginpopup .contact_details{margin-top:12px}#loginpopup .forgot{text-align:center;margin-top:11px}#loginpopup .graybott{background:#f5f5f5;padding:10px 0;border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;-webkit-border-bottom-left-radius:5px;-webkit-border-bottom-right-radius:5px;-ms- -moz-border-radius:0 0 5px 5px;font-size:14px;color:#333;font-family:robotobold;text-align:center}#loginpopup .graybott a{color:#ef5a28;text-transform:uppercase;margin-left:5px}#loginpopup .graybott a:hover{text-decoration:underline}#loginpopup .closebtn,#loginpopup .mandatory,#loginpopup .right{top:16px!important}.form_area{-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;background:#fff;box-shadow:2px 5px 9px rgba(0,0,0,.59)}.form_area .title{background:#323a45;padding:14px 30px;color:#fff;font-family:robotobold;font-size:19px;line-height:22px;border-radius:10px 10px 0 0;border-bottom:solid 2px #ef5a28}#loginpopup .close2{width:11px;height:11px;background-position:-185px -82px;position:absolute;right:15px;top:15px}.notMatchingDiv{color:red;text-align:center}#loginpopup .registerPassword:focus,#loginpopup .registerPassword:hover{-webkit-box-shadow:0 0 4px rgba(64,133,197,.47);-moz-box-shadow:0 0 4px rgba(64,133,197,.47);box-shadow:0 0 4px rgba(64,133,197,.47);border:1px solid #bcd4eb;background:#fff}#loginpopup .registerPassword{border-radius:3px;color:#7f7f7f;font-size:14px;padding:6px 60px 6px 10px;font-family:Arial,Helvetica,sans-serif;width:287px!important;height:29px;line-height:29px;margin-bottom:12px;border:1px solid #d3d3d3;background:#f0f0f0}.gifticon{background-position:-226px -229px;width:73px;height:48px;margin:23px 0 0}#leadpopup.advertpop{width:658px;margin:-200px 0 0 -329px;padding:0 0 16px}.graybg{width:100%;height:100%;position:fixed;left:0;top:0;z-index:1503;background:#e4e4e4;opacity:.95;filter:alpha(opacity=95)}.leadpopu .contact_details .button:hover .arrowroad{margin-left:8px!important;background-position:-235px -1054px}.form_area form,.leadpopu .contact_details .bggray input[type=text]:focus,.leadpopu .contact_details .bggray input[type=text]:hover{background:#fff}.leadpopu .select-wrapper .holder{color:#7f7f7f}.form_area form{padding:13px 30px;margin:0;border-radius:0 0 10px 10px}.footerlinks #loginpopup #userFormLogin a{padding:0!important}.leadpopu .contact_details span{margin:0 10px 0 0;position:relative;cursor:pointer;float:left}.form_area .filed_space{margin:0 0 10px;display:inline-block}.recapchaloginbox{margin-left:33px;margin-top:10px;margin-bottom:13px}.recapcharegisterbox{margin-left:96px;margin-top:10px;margin-bottom:13px}.recaptchaErrorLogin{color:red;margin-left:32px}.captchaBorder{border:2px solid red}.leadpopu .contact_details .button{height:43px;font-size:16px;text-transform:inherit;font-family:robotobold}
+        .disnone { display: none; }
+        #loginpopup .topclose {
+    width: 22px;
+    height: 22px;
+    background-position: -123px -114px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 0;
+}
+
+</style>
+</head>
+
+<body>
+    <div id="loginpopup" class="form_area leadpopu">
+   	  <div id="userFormLogin">
+   	  <div class="title">Login </div>
+      <div><a class="spriteheader topclose" href="javascript:closeLoginPopUp('loginPopupBackgorund','userLoginApiContainer');" title="Close">close</a></div>
+   	  <form id="userloginForm" method="post">  
+        <div class="contact_details">
+           <div class="filed_space">
+             <span class="bggray"><input type="text" id="email-id" name="emailid" class="registerPassword" value="Email" onblur="changeTextValueByObject(this,'Email');" onfocus="setTextValueByObject(this,'Email');"> <i id="emailError" class="spriteheader"></i></span>
+             <span class="bggray"><input type="password" class="registerPassword" id="registerPassword" name="password" onfocus="setTextValueByObject(this,'Password');" placeholder="Password" maxlength="40" onkeypress="return fnNotSpace(event);"><i id="passError" class="spriteheader"></i></span>
+             <div class="clear"></div>
+             <!-- Captcha Code -->
+            <!--  <div id="captchaBlock" class="disnone"><input type="hidden" id="CaptchaValueActive" name="CaptchaValueActive"/>
+			<div class="marginb5">Image Verification Code (Case Sensitive) :</div>
+			<div class="marginb5">
+				 
+				 <img src="https://www.cardekho.com/stickyImg" height="45" width="182"/>
+			</div>
+			<span class="bggray"><input type="text" maxlength="6" class="registerPassword" title="Enter Verification Code" paceholder="Enter The Code Shown Above :" class="spancomparision" id="answer" value="" name="answer"/> <i id="answerError" class="spriteheader"></i></span>
+			<input type="hidden" name="pg" value="sticky"/>
+			<br/><br/>
+				<span class="notMatchingDiv"></span>
+			
+		</div> -->
+		 <div class="g-recaptcha recapchaloginbox" data-sitekey="6LeU2SQTAAAAAAZ5GujiGUIVJv3l393-F1vmxCvh" id="reCaptchaForLogin"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?k=6LeU2SQTAAAAAAZ5GujiGUIVJv3l393-F1vmxCvh&amp;co=aHR0cHM6Ly93d3cuY2FyZGVraG8uY29tOjQ0Mw..&amp;hl=en&amp;v=r20160830132105&amp;size=normal&amp;cb=bhtvxq7oupkh" title="recaptcha widget" width="304" height="78" role="presentation" frameborder="0" scrolling="no" name="undefined"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
+		 <div id="captchaErrorCode" class="recaptchaErrorLogin"></div>
+		<!-- Captcha Code -->
+		<div id="notMatchingDiv" class="notMatchingDiv">
+		</div>
+            <input class="button loginButton" type="button" value="Login" id="loginButton" onclick="checkIsValidUserLogin();">
+            <div class="forgot"><a href="javascript:forgorPasswordPopup();" title="forgot password?" rel="nofollow">Forgot Password?</a> </div>
+           </div>  
+        </div>
+        </form>
+	<div class="graybott">New to CarDekho <a href="javascript:openUserRegisterPopup();" title="Register" rel="nofollow">register</a></div>
+
+    </div>
+    <div id="forgotPassForm" class="disnone">
+	<div class="title">Forgot Password </div>
+	<div><a class="sprite topclose" href="javascript:closeLoginPopUp('loginPopupBackgorund','userLoginApiContainer');" title="Close">close</a></div>
+	<form id="resetpassword" method="post">
+		<div class="contact_details">
+			<div class="filed_space">
+				<span class="bggray"><input type="text" id="resetemailId" onblur="changeTextValueByObject(this,'Email');" onfocus="setTextValueByObject(this,'Email');" class="registerPassword" name="EmailID" value="Email"> <i id="resetEmailError" class="sprite"></i></span>
+				<div class="clear"></div>
+				<div id="emailNotMatchingDiv" class="notMatchingDiv"></div>
+				<input class="button loginButton" type="button" value="Submit" id="loginButtonPass" onclick="resetPassword('resetemailId');">
+				<div class="forgot"><a href="javascript:reLogin();" title="Login" rel="nofollow">Login</a> </div>
+			</div>  
+		</div>
+	</form>
+	<div class="graybott">New to CarDekho <a href="javascript:openUserRegisterPopup();" title="Register" rel="nofollow">register</a></div>
+	</div>
+</div>
+<div class="graybg" id="loginPopupBackgorund">
+</div>
+</body>
+</html>

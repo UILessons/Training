@@ -1,0 +1,47 @@
+<!doctype>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+
+
+    <button> Click me </button>
+    <p>
+        Some content
+    </p>
+
+    <span></span>
+
+    <script src="jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        var defaultFontSize = parseInt($('p').css('font-size'));
+        //console.log(defaultFontSize);
+
+        $('button').click(function() {
+            $('p').animate({
+                    'font-size': defaultFontSize += 5
+                },{
+                duration:500,
+                complete:function(){
+                    console.log('Hi');
+                },
+                step:function(){
+                   var currentSize =  parseInt($(this).css('font-size'));
+                    
+                    if(currentSize == 18){
+                        console.log("I'm here " + currentSize);
+                    }
+                }
+            });    
+        });
+    </script>
+
+</body>
+
+</html>

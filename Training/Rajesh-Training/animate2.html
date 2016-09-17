@@ -1,0 +1,63 @@
+<!doctype>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        .box {
+            background: red;
+            border: 1px solid red;
+            color:#fff;
+            font-size: 16px;
+            opacity: 0.4;
+            width:150px;  
+            margin-bottom: 10px;
+            padding: 5px;            
+        }
+        
+        button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button> Animate </button>
+    
+<div id="div1" class="box">
+    
+    Div one content
+    
+</div>
+    
+<div id="div2" class="box">
+    
+    Div two content
+    
+</div>
+
+    <span></span>
+
+    <script src="jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+          $('button').click(function(){
+            $('#div1').animate({
+                'font-size':'25px',
+                'opacity':'1',
+                'width':'250px'
+            },1000, false);
+ 
+              
+              
+            $('#div2')
+            .animate({'font-size':'25px'},{duration:1000, queue:false})
+            .animate({'opacity':'1'},{duration:1000, queue:false})
+            .animate({'width':'250px'},{duration:1000, queue:false})
+            .animate({'border-width':'5px'},{duration:1000, queue:false});
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+/*Broser reset*/
+* {
+    margin:0px;
+    padding:0px;
+}
+
+span { border:5px solid red; }

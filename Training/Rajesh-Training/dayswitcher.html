@@ -1,0 +1,49 @@
+<!doctype>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="day.css">
+    
+
+    <style type="text/css">
+        ul li {
+            color: black;
+            font-size: 20px;
+        }
+        
+        button {
+            padding: 8px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <p>Some text</p>
+    </div>
+    <button data-paper="day">Day</button>
+    <button data-paper="night">Night</button>
+
+
+    <script src="jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        
+        
+        $(document).ready(function() {
+            $('button').click(function() {
+                var clickedBtn = $(this).data('paper'),
+                    $this = $(this);
+
+                $this.siblings().removeAttr('disabled').end().attr('disabled', 'disabled');
+
+                $('link').attr('href', clickedBtn + '.css');
+
+            });
+        })
+    </script>
+</body>
+
+</html>

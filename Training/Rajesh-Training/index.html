@@ -1,0 +1,37 @@
+<!doctype>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        ul li {
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <ul class="container">
+            <li>some text</li>
+            <li>some text</li>
+            <li>some text</li>
+            <li>some text</li>
+            <li>some text</li>
+            <li>some text</li>
+        </ul>
+    </div>
+
+    <script src="jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+           //$('ul li').parents('.container1').addClass('active');
+            $('ul li').closest('.container').addClass('active');            
+        });
+    </script>
+</body>
+
+</html>

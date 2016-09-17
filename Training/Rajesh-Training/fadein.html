@@ -1,0 +1,42 @@
+<!doctype>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        ul { position: relative; }
+        ul li { position: absolute; top: 0px; left:0px; }
+    </style>
+</head>
+
+<body>
+
+<ul>
+    <li> Some text 1</li>
+    <li> Some text 2</li>
+    <li> Some text 3</li>
+    <li> Some text 4</li>
+    <li> Some text 5</li>
+    <li> Some text 6</li>
+</ul>
+    <script src="jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        
+        $('ul > li:gt(0)').hide(); 
+        
+        setInterval(function(){
+
+            $('ul > li:first').fadeOut(1000).next()            .fadeIn(1000)
+            .end()
+            .appendTo('ul');           
+        },3000);
+        
+        
+    
+        
+        
+    </script>
+
+</body>
+
+</html>
