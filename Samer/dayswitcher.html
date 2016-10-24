@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="jquery.js" charset="utf-8"></script>
+  <script src="custom.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="/css/defaultThemee.css" media="screen" title="no title">
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('button').click(function() {
+      console.log($(this));
+      //var clickItem = $.trim($(this).text());   //Getting the text
+      // var clickItem = $.trim($(this).attr('data-attr'));
+      var clickItem = $.trim($(this).data('attr'));
+      console.log(clickItem);
+
+      var cssName = clickItem.toLowerCase();
+      $('link').attr('href',"/css/"+cssName+".css");
+    });
+  });
+  </script>
+  <style media="screen">
+    a {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<button type="button" name="button" data-attr="day"> Day </button>
+<button type="button" name="button" data-attr="night"> Night </button>
+
+
+
+
+</body>
+</html>
