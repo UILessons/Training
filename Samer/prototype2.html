@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function Car(make, color, model, year) {
+      this.make = make;
+      this.color = color;
+      this.model = model;
+      this.year = year;
+      this.statement = function() {
+        //return "Some text";
+        return "I bought a new "+color+" color "+model+" model "+make+" car which is last month";
+      }
+    }
+    var myCar = new Car("Honda", "blue", "Sedan", 2016);
+    var yourCar = new Car("Ford", "Red", "Sedan", 2015);
+    // myCar.old = 7; // The property will be added to myCar. Not to yourCar. Not to any other Car objects.
+    Car.prototype.old = 7;
+
+    // console.log(Car);
+    console.log(myCar);
+    console.log(myCar.statement()); // Return the function with new propertys assigned to it
+
+    // Adding a new function prototype
+    Car.prototype.pressRelease = function() {
+      return "New "+this.make+" car will be released this year("+this.year+")";
+    }
+
+    console.log(myCar.pressRelease());
+
+  </script>
+</body>
+</html>

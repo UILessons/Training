@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="jquery.js" charset="utf-8"></script>
+</head>
+<body>
+
+<div class="container"> Container </div>
+<div class="sub-container"> Sub Container </div>
+
+<script type="text/javascript">
+
+// Append and prepend
+// $('body').prepend('<div class="sub-container"> Sub Container </div>');
+// $('body').prepend('<div class="sub-container2"> Sub Container2 </div>');
+
+//Detach attach
+
+var subContainer = $('.sub-container').detach();
+console.log(subContainer);
+$('.container').append(subContainer);
+$('.container').append('<div class="sub-container2"> Sub Container2 </div>');
+
+// after(), insertAfter();
+$('<h1> Insert </h1>').insertAfter('.container');
+
+// Rest API
+
+
+
+
+
+
+</script>
+</body>
+</html>

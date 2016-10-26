@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+function Fruit(color, price, quantity) {
+  this.color = color;
+  this.price = price;
+  this.quantity = quantity;
+  this.season = function() {
+    return "The apple color is awesome";
+  }
+}
+
+var apple = new Fruit('Red','$2',3);
+var grapes = new Fruit('Purple','$2',3);
+
+Fruit.prototype.nativeCountry = 'Sweden';
+// Fruit.prototype.stateMent = function() {
+//   console.log('Statement');
+// }
+
+
+// console.log(grapes);
+ //apple.nativeCountry = 'Sweden';
+
+//console.log();
+
+var salary = "1000$";
+//var salary;
+var a =2;
+
+(function(){
+  salary;
+  console.log("Original salary was " + salary);
+  // salary = "5000$";
+  console.log("My new salary " + salary);
+})();
+
+// function mySal() {
+//   console.log(salary);
+// }
+//
+// mySal();
+
+</script>
+</body>
+</html>
