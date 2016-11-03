@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="jquery.js" charset="utf-8"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    function clock() {
+      var now = new Date();
+      var hours = now.getHours();
+      var mins = now.getMinutes();
+      var secs = now.getSeconds();
+      var currenttime = hours+":"+mins+":"+secs;
+      $('.timer').html(currenttime);
+    }
+
+    // We can return the time in three ways
+
+    // Method 1
+    setInterval(function() {
+      clock();
+    },1000);
+
+    // Method 2
+    // setInterval("clock()",1000);
+
+    // Method 3
+    // For this method remove the line # 18 inside the funtion, because we're returning it here.
+    // setInterval(function() {
+    //   $('.timer').html(clock());
+    // },1000);
+
+    </script>
+    <div class="timer"></div>
+
+
+    <!-- two BHK 20000Rs  serviced apartment -->
+    <!-- Mon to thur = my 10.30PM IST
+    Weekends = 7.00AM IST 9.30pm EST -->
+
+</body>
+</html>

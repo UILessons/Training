@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Url </title>
+  <script src="jquery.js" charset="utf-8"></script>
+</head>
+<body>
+  <!-- Don't use http or https when assinging a url, It'll automatically take the protocal from the current url. -->
+  <a href="http://www.google.com"> Go to google </a>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+      $('a').click(function(e) {
+
+        // Preventing current Action
+        e.preventDefault();
+
+        var whereToGo = "objects.html";
+        //Simpley get the current url using origin method;
+         var formTheUrl = window.location.origin;
+
+          // Older IE browser will not support origin method,
+          // In this case use below method to construct the formTheUrl
+
+
+        //  var getProtocol = window.location.protocol;
+        //  var gethostName = window.location.host;
+        //
+        // var formTheUrl = getProtocol +"//"+ gethostName;
+
+
+        window.location.href = formTheUrl+"/"+whereToGo;
+      });
+  });
+
+  </script>
+</body>
+</html>
